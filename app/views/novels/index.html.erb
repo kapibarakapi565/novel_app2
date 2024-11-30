@@ -3,7 +3,6 @@
   <p><%= novel.title %></p>
   <%= link_to '章一覧画面', novel_chapters_path(novel_id: novel.id) %>
   <%= link_to '新規章作成', new_novel_chapter_path(novel) %>
-  <%= link_to '閲覧', novel_path(novel.id)%>
-  <%= link_to '編集', edit_novel_path(novel.id) %>
+  <%= link_to 'タイトル編集', edit_novel_path(novel.id) %>
   <%= link_to '削除', novel_path(novel.id), data: { turbo_method: :delete } %>
 <% end %>

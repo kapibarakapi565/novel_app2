@@ -1,6 +1,9 @@
+<h1><%= @novel.title %>の章一覧</h1>
+
 <% @chapters.each do |chapter| %>
 <div><%= chapter.title %></div>
 <div><%= chapter.main_text%></div>
 <%= link_to '編集', edit_novel_chapter_path(chapter.novel_id, chapter.id) %>
+<%= link_to '閲覧', novel_chapter_path(chapter.novel_id, chapter.id)%>
 <% end %>
-<%= link_to '小説一覧に戻る', root_path%>
+<div><%= link_to '小説一覧に戻る', root_path%></div>

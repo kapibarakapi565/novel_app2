@@ -1,7 +1,7 @@
 class NovelsController < ApplicationController
 
   def index
-    @novels = Novel.all
+    @novels = Novel.includes(:chapters).all
   end
 
   def new
@@ -15,6 +15,16 @@ class NovelsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @novel = Novel.find(params[:id]) 
+  end
+
+  def update
+    novel = Novel.find(params[:id])
+    novel.update(novel_params)
+    redirect_to root_path
   end
 
   def destroy

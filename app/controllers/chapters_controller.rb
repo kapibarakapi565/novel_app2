@@ -1,7 +1,7 @@
 class ChaptersController < ApplicationController
   def index
     @novel = Novel.find(params[:novel_id])
-    @chapters = Chapter.all
+    @chapters = @novel.chapters
   end
   
   def new
@@ -30,6 +30,11 @@ class ChaptersController < ApplicationController
     chapter = Chapter.find(params[:id])
     chapter.update(chapter_params)
     redirect_to novel_chapters_path
+  end
+
+  def show
+    @novel = Novel.find(params[:novel_id])
+    @chapter = Chapter.find(params[:id])
   end
 
   private
