@@ -1,0 +1,12 @@
+<%= form_with model: [@novel, @chapter], local: true do |form| %>
+  <div>
+    <%= form.label :title, "章タイトル"%>
+    <%= form.text_field :title%>
+  </div>
+  <div>
+    <%= form.text_area :main_text%>
+  </div>
+  <%= form.submit "保存"%>
+<% end %>
+
+<%= link_to "小説一覧に戻る", novels_path %>
