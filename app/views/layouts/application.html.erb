@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <header>
+      <h1>
+      <% if defined?(@chapter_title) && @chapter_title.present? %>
+        <%= @chapter_title %>
+      <% elsif defined?(@novel_title) && @novel_title.present? %>
+        <%= @novel_title %>
+      <% else %>
+        小説ノート
+      <% end %>
+      <h1>
+    </header>
     <%= yield %>
   </body>
 </html>

@@ -2,6 +2,8 @@ class ChaptersController < ApplicationController
   def index
     @novel = Novel.find(params[:novel_id])
     @chapters = @novel.chapters
+
+    @novel_title = @novel.title
   end
   
   def new
@@ -35,6 +37,8 @@ class ChaptersController < ApplicationController
   def show
     @novel = Novel.find(params[:novel_id])
     @chapter = Chapter.find(params[:id])
+
+    @chapter_title = @chapter.title
   end
 
   private
