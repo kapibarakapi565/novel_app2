@@ -1,3 +1,36 @@
+/* ----------------------------- */
+/* base
+/* ----------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: lightgray;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  letter-spacing: .05em;
+}
+ul {
+  list-style: none;
+}
+
 header{
   background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.site-title {
+  color: white;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.textarea{
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
 }

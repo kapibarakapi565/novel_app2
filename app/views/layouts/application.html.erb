@@ -12,7 +12,7 @@
 
   <body>
     <header>
-      <h1>
+      <h1 class="site-title">
       <% if defined?(@chapter_title) && @chapter_title.present? %>
         <%= @chapter_title %>
       <% elsif defined?(@novel_title) && @novel_title.present? %>
@@ -20,7 +20,7 @@
       <% else %>
         小説ノート
       <% end %>
-      <h1>
+      </h1>
     </header>
     <%= yield %>
   </body>
